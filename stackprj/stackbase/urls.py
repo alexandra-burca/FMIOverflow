@@ -5,5 +5,5 @@ app_name = 'stackbase'
 
 urlpatterns = [
     path('', views.home, name="home"),
-    path('about/', views.home, name="about")
+    path('about/', views.about, name="about")
 ]
