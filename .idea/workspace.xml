@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d3a34110-59d3-416f-b208-a26842a14b0f" name="Changes" comment="edit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stackprj/stackbase/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/stackprj/stackbase/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stackprj/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/stackprj/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stackprj/stackbase/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/stackprj/stackbase/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stackprj/stackprj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/stackprj/stackprj/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stackprj/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/stackprj/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stackprj/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/stackprj/templates/home.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +32,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "NewWatcherDialog.advanced.open": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -39,10 +42,16 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "watcher.settings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alexandra\OneDrive\Desktop\FMIOverflow\stackprj\static" />
+      <recent name="C:\Users\Alexandra\OneDrive\Desktop\FMIOverflow\stackprj\templates" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -53,7 +62,8 @@
       <updated>1683038739725</updated>
       <workItem from="1683038742530" duration="11000" />
       <workItem from="1683038835574" duration="282000" />
-      <workItem from="1683039129941" duration="4852000" />
+      <workItem from="1683039129941" duration="5574000" />
+      <workItem from="1683399965621" duration="4316000" />
     </task>
     <task id="LOCAL-00001" summary="edit">
       <created>1683044092238</created>
@@ -62,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683044092238</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="edit">
+      <created>1683044293860</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683044293860</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
