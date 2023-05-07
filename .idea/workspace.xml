@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3a34110-59d3-416f-b208-a26842a14b0f" name="Changes" comment="edit">
-      <change beforePath="$PROJECT_DIR$/stackprj/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/stackprj/db.sqlite3" afterDir="false" />
+    <list default="true" id="d3a34110-59d3-416f-b208-a26842a14b0f" name="Changes" comment="frontend v1">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stackprj/secret.env" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +62,7 @@
       <workItem from="1683038835574" duration="282000" />
       <workItem from="1683039129941" duration="5574000" />
       <workItem from="1683399965621" duration="4316000" />
+      <workItem from="1683485961228" duration="287000" />
     </task>
     <task id="LOCAL-00001" summary="edit">
       <created>1683044092238</created>
@@ -75,11 +78,21 @@
       <option name="project" value="LOCAL" />
       <updated>1683044293860</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="frontend v1">
+      <created>1683485675569</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683485675569</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -94,6 +107,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit" />
+    <MESSAGE value="frontend v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="frontend v1" />
   </component>
 </project>
