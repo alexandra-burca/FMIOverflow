@@ -15,10 +15,10 @@ import os
 from django.core.management.utils import get_random_secret_key
 from dotenv import load_dotenv, find_dotenv
 
-SECRET_KEY = get_random_secret_key()
+#SECRET_KEY = get_random_secret_key()
 
-#load_dotenv(find_dotenv())
-#SECRET_KEY = os.environ.get("SECRET_KEY")
+load_dotenv(find_dotenv())
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
