@@ -12,10 +12,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-from django.core.management.utils import get_random_secret_key
 from dotenv import load_dotenv, find_dotenv
-
-#SECRET_KEY = get_random_secret_key()
+from crispy_forms import __version__ as CRISPY_FORMS_VERSION
 
 load_dotenv(find_dotenv())
 SECRET_KEY = os.environ.get("SECRET_KEY")
@@ -31,6 +29,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # Application definition
 
@@ -44,7 +45,9 @@ INSTALLED_APPS = [
     #own
     'stackbase',
     'stackusers',
+    #crispy
     'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
