@@ -1,0 +1,17 @@
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <h2>Login</h2>
+  <form action="" method="post">
+    {% csrf_token %}
+    <table>  
+        {{ form|crispy }}  
+            <tr>  
+            <td></td>  
+            <td><input type="submit" class="fadeIn fourth" name="submit" value="Login" /></td>  
+            </tr>  
+    </table>
+    <p> Forgot password? Click <a class="" href=""> here </a> to send it to your mail. </p>
+    <p> Don't have an account? <a class="" href="register"> Register </a> </p>
+  </form>
+{% endblock %}

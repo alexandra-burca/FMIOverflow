@@ -7,7 +7,7 @@
   
     {% if messages %}  
         <ul>   
-            {% for message in messages %}  
+            {% for message in messages %}
                 <li>{{ message }}</li>  
                 {% endfor %}  
         </ul>   
@@ -15,17 +15,17 @@
       
     <h1>Register Here</h1>  
   
-         <form  action="" method="post" >  
-             {% csrf_token %}  
-             <table>  
-                {{ form|crispy }}  
-                 <tr>  
-                    <td></td>  
-                    <td><input type="submit" class="fadeIn fourth" name="submit" value="Register" /></td>  
-                </tr>  
-             </table>  
-         </form>
-         <p> Already have an account? <a class="" href=""> Login </a> </p>
-     </div>  
+    <form  action="" method="POST" >  
+        {% csrf_token %}  
+        <table>  
+        {{ form|crispy }}  
+            <tr>  
+            <td></td>  
+            <td><input type="submit" class="fadeIn fourth" name="submit" value="Register" /></td>  
+            </tr>  
+        </table>  
+    </form>
+    <p> Already have an account? <a class="" href="/login"> Login </a> </p>
+</div>  
   
 {% endblock content %}  
