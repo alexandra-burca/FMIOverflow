@@ -1,9 +1,9 @@
-from django.shortcuts import render,redirect
-#from django.contrib.auth.forms import UserCreationForm 
+from django.shortcuts import render,redirect 
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate, login
 from django.contrib import messages
 from .forms import RegisterForm,LoginForm
+from django.contrib.auth.decorators import login_required
 
 def registerPage(request):
     if request.method=="POST":
@@ -36,6 +36,7 @@ def loginPage(request):
     context = {'form': form}
     return render(request, 'stackusers/login.html', context)
 
+@login_required
 def profilePage (request):
     return render(request,'stackusers/profile.html')
 
