@@ -26,4 +26,6 @@ urlpatterns = [
     path('register',user_views.registerPage,name="register"),
     #path('login',auth_views.LoginView.as_view(template_name="stackusers/login.html"),name="login"),
     path('login',user_views.loginPage,name="login"),
+    path('logout',auth_views.LogoutView.as_view(template_name="stackusers/logout.html"),name="logout"),
+    path('profile',user_views.profilePage,name="profile"),
 ]

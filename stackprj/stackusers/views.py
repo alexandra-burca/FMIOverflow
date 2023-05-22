@@ -36,3 +36,6 @@ def loginPage(request):
     context = {'form': form}
     return render(request, 'stackusers/login.html', context)
 
+def profilePage (request):
+    return render(request,'stackusers/profile.html')
+
