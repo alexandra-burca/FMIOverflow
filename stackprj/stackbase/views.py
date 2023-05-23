@@ -10,4 +10,4 @@ def about(request):
 
 class QuestionListView(ListView):
     model = Question
-    context = 'question'
+    context_object_name = 'question'
