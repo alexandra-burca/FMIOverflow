@@ -1,22 +1,39 @@
 {% extends 'base.html' %}
 {% block content %}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Profile </title>
+
+    <style>
+         @import url('https://fonts.googleapis.com/css?family=Poppins');
+
+ body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+    font-size:16px;
+}
+    </style>
+</head>
+
 <body>
-    <header>
-    </header>
 
     <main>
-        <div class="container">
-            <div class="profile_pic"><img src="{{ user.profile.image.url }}"></div>
-            <b><h5>Username</h5></b>
-            <h6>{{ user.username|title }}</h6>
-            <b><h5>Bio</h5></b>
-            <h6>{{ user.profile.bio|title }}</h6>
-            <b><h5>Email</h5></b>
-            <h6>{{ user.email }}</h6>
-            <b><h5>Phone number</h5></b>
-            <h6>{{ user.profile.phone }}</h6>
+        <div class="container" style="margin-top:70px; margin-left:50px;padding:10px;">
+            <div class="profile_pic"> <img src="{{ user.profile.image.url }}"></div>
+            <p><b>Username</b></p>
+            <p>{{ user.username|title }}</p>
+            <b><p>Bio</p></b>
+            <p>{{ user.profile.bio|title }}</p>
+            <b><p>Email</p></b>
+            <p>{{ user.email }}</p>
+            <b><p>Phone number</p></b>
+            <p>{{ user.profile.phone }}</p>
 
-            
         </div>
     </main>
 </body>
