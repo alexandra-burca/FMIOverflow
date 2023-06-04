@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,10 +21,19 @@ body {
   height: 100vh;
     font-size:16px;
 }
+
+li {
+    margin-bottom: 7px;
+}
+
+.nav-search{
+    display: none;
+}
+
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  background-color: #f48024;
     font-family: "Poppins", sans-serif;
   border: none;
   color: white;
@@ -33,7 +42,7 @@ input[type=button], input[type=submit], input[type=reset]  {
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 15px;
   -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
@@ -46,7 +55,7 @@ input[type=button], input[type=submit], input[type=reset]  {
   transition: all 0.3s ease-in-out;
 }
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
+  background-color: #fba34a;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -60,13 +69,13 @@ input[type=text], input[type=email], input[type=password] {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
-  padding: 10px 32px;
-  text-align: center;
+  padding: 10px;
+  text-align: left;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 5px;
-  width: 40%;
+  margin: 8px;
+  width: 30%;
   border: 2px solid #f6f6f6;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -76,26 +85,24 @@ input[type=text], input[type=email], input[type=password] {
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
-
     </style>
 
 </head>
 
 <body>
 
-  <form action="" method="post" style="margin-top:70px; margin-left:50px;padding:10px;">
+  <form action="" method="post" style="margin-top:120px; margin-left:100px;margin-bottom:400px;">
       <h1>Login</h1>
     {% csrf_token %}
-    <table>
+
         {{ form|crispy }}
-            <tr>
-            <td></td>
-            <td><input type="submit" class="fadeIn fourth" name="submit" value="Login" /></td>
-            </tr>
-    </table>
-    <p> Forgot password? Click <a class="" href=""> here </a> to send it to your mail. </p>
-    <p> Don't have an account? <a class="button" href="register"> Register </a> </p>
+
+            <input style="margin-top:20px" type="submit" class="fadeIn fourth" name="submit" value="Login" />
+      <ul>
+        <li> Forgot password? Click <a style="color:#fff" class="" href=""> here </a> to send it to your mail. </li>
+      </ul>
+
   </form>
 </body>
-</html>
+
 {% endblock %}
