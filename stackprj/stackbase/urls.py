@@ -7,4 +7,6 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('about/', views.about, name="about"),
     path('questions/',views.QuestionListView.as_view(),name="question_list"),
+    path('questions/new',views.QuestionCreateView.as_view(),name="question_create"),
+    path('questions/<int:pk>',views.QuestionDetailView.as_view(),name="question_detail"),
 ]

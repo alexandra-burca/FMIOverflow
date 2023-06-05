@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+<html>
+
+<body>
+    <div class="detail">
+        <h1>CREATE PAGE</h1>
+        <form action="" method="POST" >
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn_succes" type="submit">Post Question</button>
+            <a href="">Cancel</a>
+        </form>
+        
+    </div>
+</body>
+
+</html>
+{% endblock %}

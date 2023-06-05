@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from stackusers import views as user_views
+from stackbase import views as base_views
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -31,6 +32,8 @@ urlpatterns = [
     path('logout',auth_views.LogoutView.as_view(template_name="stackusers/logout.html"),name="logout"),
     path('profile',user_views.profilePage,name="profile"),
     path('profile/update',user_views.profileUpdatePage,name="profile_update"),
+    path('questions',base_views.QuestionListView.as_view(template_name="stackbase/question_list.html")),
+    path('questions/<int:pk>',base_views.QuestionDetailView.as_view(template_name="stackbase/question_detail.html")),
 ]
 
 if settings.DEBUG:
