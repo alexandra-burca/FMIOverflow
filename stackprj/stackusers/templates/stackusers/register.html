@@ -14,7 +14,6 @@
 
 html {
   background-color: #e7e7e7;
-  background: linear-gradient(200deg, rgb(68,148,232) 100%, rgb(51, 110, 178) 100%);
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -22,6 +21,9 @@ body {
     font-size:16px;
 }
 
+li {
+    margin-bottom: 7px;
+}
 
 .nav-search{
     display: none;
@@ -72,7 +74,7 @@ input[type=text], input[type=email], input[type=password] {
   display: inline-block;
   font-size: 16px;
   margin: 8px;
-  width: 30%;
+  width: 70%;
   border: 2px solid #f6f6f6;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -82,12 +84,33 @@ input[type=text], input[type=email], input[type=password] {
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
+
+.centered-container {
+            background-color: #71c1fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            width: 30%;
+            padding: 20px;
+            margin: auto;
+
+            border-radius: 20px;
+            -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+            box-shadow: 0 1px 20px 0 rgba(53, 53, 53, 0.452);
+            border: none;
+            margin-bottom: 30px;
+            line-height: 25px;
+
+        }
+
     </style>
 </head>
 
 <body>
-<div class = "login" style="margin-top:120px; margin-left:100px;margin-bottom:50px;">
+<div style="margin-top:100px;"> </div>
 
+<div class="centered-container">
     {% if messages %}
         <ul>
             {% for message in messages %}
@@ -96,18 +119,15 @@ input[type=text], input[type=email], input[type=password] {
         </ul>
     {% endif %}
 
-    <h1>Register Here</h1>
-
-    <form  action="" method="POST" >
+    <form  action="" method="POST" style="margin-top:10px; margin-left:100px;">
+        <h1>Register Here</h1>
         {% csrf_token %}
-
         {{ form|crispy }}
-
-            <input style="margin-top:20px" type="submit" class="fadeIn fourth" name="submit" value="Register" />
-
+            <input style="margin-top:20px;margin-left:80px" type="submit" class="fadeIn fourth" name="submit" value="Register" />
     </form>
-
 </div>
+
+<div style="margin-bottom:100px;"> </div>
 </body>
 </html>
 {% endblock content %}
