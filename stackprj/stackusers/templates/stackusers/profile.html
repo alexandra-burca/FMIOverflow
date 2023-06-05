@@ -1,44 +1,160 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
 
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> Profile </title>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
 
-    <style>
-         @import url('https://fonts.googleapis.com/css?family=Poppins');
+        <style>
 
- body {
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
-  font-size: 16px;
-}
- p {
-     margin: 5px;
- }
-    </style>
-</head>
+        body {
+            background-color: #ffff
+        }
 
-<body>
+        .img-radius {
+            border-radius: 20px;
+            width: 300px;
+            heigth: 300px;
+            margin-bottom:10px;
+            margin-right:20px;
+        }
 
-    <main>
-        <div class="container" style="margin-top:70px; margin-left:50px;margin-bottom:150px; padding:10px;">
-            <div class="profile_pic"> <img src="{{ user.profile.image.url }}" style="margin:20px; height:250px; width:250px; border:2px solid black"></div>
-            <p><b>Username</b></p>
-            <p>{{ user.username|title }}</p>
-            <b><p>Bio</p></b>
-            <p>{{ user.profile.bio|title }}</p>
-            <b><p>Email</p></b>
-            <p>{{ user.email }}</p>
-            <b><p>Phone number</p></b>
-            <p>{{ user.profile.phone }}</p>
+        h6 {
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
 
-        </div>
-    </main>
-</body>
-</html>
-{% endblock %}
+        }
+
+        p1 {
+            font-size:16px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        @media only screen and (min-width: 1400px) {
+            p {
+                font-size: 17px
+            }
+        }
+
+        .btn-update {
+            background-color: #fba34a;
+            font-size: 13px;
+            border: none;
+            color: black;
+            font-family: 'Poppins', sans-serif;
+            margin: 4px 80px;
+        }
+        .btn-update:hover {
+        background-color: #d67200;
+        }
+
+        .btn-question {
+            background-color: #74cfee;
+            font-size: 13px;
+            border: none;
+            color: black;
+            font-family: 'Poppins', sans-serif;
+            margin: 4px 40px;
+        }
+        .btn-question:hover {
+        background-color: #559abe;
+        }
+
+        .line {
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 1px;
+         background-color: grey;
+        }
+
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            width: 50%;
+            padding: 20px;
+            margin: auto;
+
+            border-radius: 20px;
+            -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+            box-shadow: 0 1px 20px 0 rgba(53, 53, 53, 0.452);
+            border: none;
+            margin-bottom: 30px;
+            line-height: 25px;
+
+        }
+
+        .image-container {
+             padding: 5px;
+
+        }
+
+        .info-container {
+            /* Add any desired styling for the bio container */
+        }
+
+        </style>
+    </head>
+    <body>
+
+    <div style="margin-top:150px;"> </div>
+
+            <div class="centered-container">
+                <div class="image-container">
+                    <img src="{{ user.profile.image.url }}" class="img-radius" style="border:1px solid black;" alt="User-Profile-Image">
+                    <h6 class="f-w-600" style="font-size: 24px; color: black;"><!-- Add username here -->{{ user.username|title }}</h6>
+                    <h6 style="font-size: 14px; color: black;"><!-- Add bio here -->{{ user.profile.bio|title }}</h6>
+                        <div style="margin-top: 10px;">
+                             <button class="btn btn-update"><a href="{% url 'profile_update' %}" style="color: white">Update Profile</a></button>
+                        </div>
+                </div>
+
+                <div class="info-container">
+                    <p1>Information</p1>
+                    <div class="line"></div>
+                    <div class="row">
+                        <div>
+                            <h6>Email</h6>
+                            <h6><!-- Add email here -->{{ user.email }}</h6>
+                        </div>
+                        <div>
+                            <h6>Phone</h6>
+                            <h6><!-- Add phone here -->{{ user.profile.phone|title }}</h6>
+                        </div>
+                    </div>
+                    <p1>Projects</p1>
+                    <div class="line"></div>
+                    <div class="row">
+                        <div style="float:left">
+                            <h6>Recent</h6>
+                            <h6><a href="#">Project1</a></h6>
+                        </div>
+                        <div style="flaot:right; margin-left:150px">
+                            <h6>Most Viewed</h6>
+                            <h6><a href="#">Project2</a></h6>
+                        </div>
+
+                        <div style="margin-top: 55px;">
+                            <button class="btn btn-question"><a href="" style="color: white">Ask Question</a></button>
+                            <button class="btn btn-question"><a href="" style="color: white">View Questions</a></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+<div style="margin-bottom:150px"></div>
+        <script>
+            feather.replace()
+          </script>
+
+    </body>
+
+{% endblock content %}

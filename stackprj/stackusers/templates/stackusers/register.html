@@ -14,7 +14,6 @@
 
 html {
   background-color: #e7e7e7;
-  background: linear-gradient(200deg, rgb(68,148,232) 100%, rgb(51, 110, 178) 100%);
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -22,11 +21,18 @@ body {
     font-size:16px;
 }
 
+li {
+    margin-bottom: 7px;
+}
+
+.nav-search{
+    display: none;
+}
 
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  background-color: #f48024;
     font-family: "Poppins", sans-serif;
   border: none;
   color: white;
@@ -35,7 +41,7 @@ input[type=button], input[type=submit], input[type=reset]  {
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 15px;
   -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
@@ -48,7 +54,7 @@ input[type=button], input[type=submit], input[type=reset]  {
   transition: all 0.3s ease-in-out;
 }
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
+  background-color: #fba34a;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -62,13 +68,13 @@ input[type=text], input[type=email], input[type=password] {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
-  padding: 10px 32px;
-  text-align: center;
+  padding: 10px;
+  text-align: left;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 5px;
-  width: 40%;
+  margin: 8px;
+  width: 70%;
   border: 2px solid #f6f6f6;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -78,12 +84,33 @@ input[type=text], input[type=email], input[type=password] {
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
 }
+
+.centered-container {
+            background-color: #71c1fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            width: 30%;
+            padding: 20px;
+            margin: auto;
+
+            border-radius: 20px;
+            -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+            box-shadow: 0 1px 20px 0 rgba(53, 53, 53, 0.452);
+            border: none;
+            margin-bottom: 30px;
+            line-height: 25px;
+
+        }
+
     </style>
 </head>
 
 <body>
-<div class = "login" style="margin-top:70px; margin-left:50px;padding:10px;">
+<div style="margin-top:100px;"> </div>
 
+<div class="centered-container">
     {% if messages %}
         <ul>
             {% for message in messages %}
@@ -92,20 +119,15 @@ input[type=text], input[type=email], input[type=password] {
         </ul>
     {% endif %}
 
-    <h1>Register Here</h1>
-
-    <form  action="" method="POST" >
+    <form  action="" method="POST" style="margin-top:10px; margin-left:100px;">
+        <h1>Register Here</h1>
         {% csrf_token %}
-        <table>
         {{ form|crispy }}
-            <tr>
-            <td></td>
-            <td><input type="submit" class="fadeIn fourth" name="submit" value="Register" /></td>
-            </tr>
-        </table>
+            <input style="margin-top:20px;margin-left:80px" type="submit" class="fadeIn fourth" name="submit" value="Register" />
     </form>
-    <p> Already have an account? <a class="" href="/login"> Login </a> </p>
 </div>
+
+<div style="margin-bottom:100px;"> </div>
 </body>
 </html>
 {% endblock content %}
