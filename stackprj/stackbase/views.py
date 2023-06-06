@@ -44,6 +44,7 @@ class QuestionDeleteView(UserPassesTestMixin,DeleteView):
     model = Question
     context_object_name = 'question'
     success_url="/"
+    template_name = 'stackbase/question_confirm_delete.html'
 
     def test_func(self):
         questions= self.get_object()
