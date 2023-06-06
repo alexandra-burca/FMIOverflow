@@ -138,20 +138,18 @@
 
                     <h2>Answers...</h2> <br><br><br>
 
-                    <div>
                     {% if not question.comment.all %}
                         <h3>No Answers yet... <a href="">Answer Question</a> </h3>
                     {% else %}
                         {% for comment in question.comment.all %}
                             <h3 style="font-weight: normal; font-size: 15px;">{{comment.content|safe}}</h3>
-                            <h3 style="font-size: 10px;">Answered by: <i><a href="">{{comment.name}}</a> - On: {{comment.date_created|date:"j F, Y"}}</i></h3>
+                            <h3 style="font-size: 12px;">Answered by: <i><a href="">{{comment.name}}</a> - On: {{comment.date_created|date:"j F, Y"}}</i></h3>
                             <hr>
                         {% endfor %}
                     {% endif %}
-                    </div>
 
                     <div style="margin-top:30px;margin-bottom:20px">
-                    <a class="btn btn-outline blue" id="fa" href="" style="text-decoration: none;">Answer Question</a>
+                    <a class="btn btn-outline blue" id="fa" href="{% url 'stackbase:question_comment' question.id %}" style="text-decoration: none;">Answer Question</a>
                     <a class="btn btn-outline green" style="text-decoration: none;margin-left:850px"  href="{% url 'stackbase:question_update' question.id %}">&#x270E;</a>
                     <a class="btn btn-outline red" style="text-decoration: none;"  href="{% url 'stackbase:question_delete' question.id %}">&#x2716;</a>
                     <a class="btn btn-outline gray" style="text-decoration: none;"  href="{% url 'stackbase:question_list' %}">&#x21a9;</a>
