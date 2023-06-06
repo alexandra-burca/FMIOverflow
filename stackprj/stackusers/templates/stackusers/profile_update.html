@@ -165,12 +165,12 @@ input[type=text], input[type=email], input[type=password] {
                 {% csrf_token %}
                 {{u_form|crispy}}
                 {{p_form|crispy}}
+                <button class="btn btn-update" type="submit" style="color: white;margin-top:20px;"> Update Profile </button>
             </form>
      </div>
      <div class="info-container>">
            <img src="{{ user.profile.image.url }}" class="img-radius" style="border:1px solid black;margin-left:100px" alt="User-Profile-Image">
                 <div style="margin-top:10px; margin-left:90px">
-                    <button class="btn btn-update" type="submit" style="color: white;"> Update Profile </button>
                     <button class="btn btn-question" type="submit"><a href="{% url 'profile' %}" style="color: white;">Go Back</a> </button>
                 </div>
      </div>

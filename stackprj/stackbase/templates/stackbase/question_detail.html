@@ -1,17 +1,83 @@
-
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
 {% block content %}
 <html>
 
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+        <style>
+
+        body {
+            background-color: #f9c78f;
+        }
+
+        h6 {
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        .btn-post {
+            background-color: #fba34a;
+            font-size: 13px;
+            border: none;
+            color: black;
+            font-family: 'Poppins', sans-serif;
+            margin: 14px 80px;
+        }
+        .btn-post:hover {
+        background-color: #d67200;
+        }
+
+        .centered-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            width: 50%;
+            padding: 20px;
+            margin: auto;
+            background-color: #fff;
+
+            border-radius: 20px;
+            -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+            box-shadow: 0 1px 20px 0 rgba(53, 53, 53, 0.452);
+            border: none;
+            margin-bottom: 30px;
+            line-height: 25px;
+
+        }
+
+        .info-container{
+            float:left;
+        }
+
+        </style>
+    </head>
+
 <body>
-    <div class="detail">
-        <h1>DETAIL PAGE</h1>
-        <h3 id="fh3">{{ question.title }}</h3>
-        <hr>
-        <h6 id="fh6">{{ question.content|safe }}</h6>
-        <hr>
-        <h6 id="fh6" style="font-size: 10px; font-style: italic; color: rgb(155, 155, 155);">Asked By: <a href="{% url 'profile' %}">{{ question.user }}</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; On: {{question.date_created|date:"j F, Y"}}</h6>
-        
+<div style="margin-top:150px;"> </div>
+    <div class="centered-container">
+
+
+        <div class="info-container">
+             <h1>DETAIL PAGE</h1>
+            <h6 id="fh3">{{ question.title }}</h6>
+
+            <h6 id="fh6">{{ question.content|safe }}</h6>
+
+            <h6 id="fh6" style="font-size: 12px; font-style: italic; color: rgb(155, 155, 155);">Asked By: <a href="{% url 'profile' %}">{{ question.user }}</a>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp; On: {{question.date_created|date:"j F, Y"}}</h6>
+        </div>
+
     </div>
+<div style="margin-bottom:150px;"> </div>
 </body>
 
 </html>

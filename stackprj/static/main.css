@@ -448,7 +448,7 @@
 
   /* Hero */
   .hero {
-    background-image: url("https://cdn.sstatic.net/Img/home/illo-hero-full.svg?v=e2018a5f9272");
+    background-image: url("https://dci.uvt.ro/wp-content/uploads/2018/08/Desktop-UVT-1080-x-1920.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-color: #4b95f4;
@@ -457,6 +457,11 @@
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
   }
 
   .hero-content {
@@ -494,15 +499,13 @@
   }
 
   .btn-developers {
-    background-color: #fff;
-    color: #f48024;
-    border: 1px solid #f48024;
-  }
-
-  .btn-businesses {
     background-color: #f48024;
     color: #fff;
-    margin-left: 0.5rem;
+    border: none;
+  }
+
+  .btn-developers:hover {
+    background-color: #f3b653;
   }
 
   /*End Hero*/
