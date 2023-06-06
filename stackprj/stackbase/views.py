@@ -16,6 +16,14 @@ class QuestionListView(ListView):
     context_object_name = 'question'
     ordering = ['-date_created']
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        search_input = self.request.GET.get('search-area') or ""
+        if search_input:
+            context['question'] = context['question'].filter(title__icontains = search_input)
+            context['search_input'] = search_input
+        return context
+
 class QuestionDetailView(DetailView):
     model = Question
     context_object_name = 'question'
