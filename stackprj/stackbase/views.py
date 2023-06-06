@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView,DetailView,CreateView
+from django.views.generic import ListView,DetailView,CreateView,UpdateView
 from .models import Question
 
 def home(request):
@@ -24,5 +24,13 @@ class QuestionCreateView(CreateView):
     def form_valid(self,form):
         form.instance.user=self.request.user
         return super().form_valid(form)
+    
+class QuestionUpdateView(UpdateView):
+    model = Question
+    fields =['title','content']
+    context_object_name = 'question'
+    #def form_valid(self,form):
+    #    form.instance.user=self.request.user
+    #    return super().form_valid(form)
     
     
