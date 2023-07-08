@@ -48,5 +48,5 @@ Using the search bar at the top, a user can search for key-words, and the questi
 
 ## Conclusions
 
-This project was made by two people during a few weeks as part of a school project. We wanted to create a typical social media clone as we thought it was interesting and useful to develop our skills, but still introduce original elements that best suited our goals - to facilitate a channel that helps the students of our university interact and communicate programming problems. Neither of us had prior Python or Django experience, but we managed to overcome all the challenges presented during development.  
+This project was made by two people during a few weeks as part of a school project. We wanted to create a typical social media clone as we thought it was interesting and useful to develop our skills, but still introduce original elements that best suited our goals - to facilitate a channel that helps the students of our university interact and communicate programming problems.
 
